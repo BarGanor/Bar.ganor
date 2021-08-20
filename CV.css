@@ -1,11 +1,23 @@
 :root{
-    --automnRed : rgba(196, 40, 26, 0.51)
+    --automnRed : rgba(196, 40, 26, 0.51);
+    --lightPink : #f19d9d;
 }
+
+@keyframes textBg {
+    0%   {background-color: var(--automnRed);}
+    50%  {background-color: var(--lightPink);}
+    100% {background-color: var(--automnRed);}
+}
+
+
 body{
     background-image: url("Landscape-Color.jpg");
 }
 .navbar-element{
     background-color: var(--automnRed);
+    animation-name : textBg;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
     color: white;
     border-style: solid ;
     border-color: black;
@@ -25,6 +37,9 @@ body{
 }
 .headers{
     background-color: var(--automnRed);
+    animation-name : textBg;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
     grid-area: nameArea;
     grid-column: 1;
     grid-row:1;
